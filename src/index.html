@@ -8,12 +8,12 @@
   <link ref='stylesheet' href='./tailwind.css'>
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
+    
 </head>
-
 <body>
   <div class='main-sect'>
     <center>
-      <h1 class='main-title'>Quick<span>&#160;</span>Notes</h1>
+      <h1 contenteditable="true" class='main-title'>Quick<span>&#160;</span>Notes</h1>
     </center>
 
     <div class="keys-group">
@@ -23,7 +23,7 @@
             <tr class='add'>
               <td class='first-t'>
                 <div class='icon-div'>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24"
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
                     stroke="#fff">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                       d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -37,7 +37,7 @@
             <tr>
               <td class='first-t'>
                 <div class='icon-div'>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24"
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
                     stroke="#fff">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -52,9 +52,11 @@
             <tr>
               <td class='first-t'>
                 <div class='icon-div'>
-                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#fff">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
-</svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
+                    stroke="#fff">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                      d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                  </svg>
 
                 </div>
               </td>
@@ -65,13 +67,13 @@
             <tr>
               <td class='first-t'>
                 <div class='icon-div'>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#fff">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-</svg>
-
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+                    stroke="#fff">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
                 </div>
               </td>
-
               <td class='third-t'>
                 ctrl + ]
               </td>
@@ -81,20 +83,26 @@
       </div>
     </div>
 
+    <select name="food_selector" data-placeholder="Select a food to eat">
+	<option value="pancakes">Test</option>
+</select>
 
 
-
+    <div id="caret" class="default size15 hidden" style="top: 37px; left: 5px; animation-name: caretFlashSmooth; opacity: 1;"></div>
     <div class='text-input'>
-      <textarea style="resize: none;" id="plainText" placeholder="Write shit down here" autofocus=""
-        style="display: none;"></textarea>
+      <textarea spellcheck="true" style="resize: none;" id="plainText" autofocus="" style="display: none;"></textarea>
     </div>
   </div>
-      <div class='alert-popup'>
+  <div class='alert-popup'>
 
-      <center><p class='alert-msg'>Test</p></center>
+    <center>
+      <p class='alert-msg'>Test</p>
+    </center>
 
-    </div>
+  </div>
 </body>
 <script src='./app.js'></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+<script type="text/javascript" src="./select.min.js"></script>
 
 </html>
